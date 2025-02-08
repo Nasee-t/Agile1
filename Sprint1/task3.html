@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Task 3</title>
+    <style>
+        /* EX 1 */
+        nav{
+            border: 2px;
+            background-color: black;
+            padding: 10px;
+        }
+        .link{
+            text-decoration: none;
+            color
+            :white;
+        }
+        .center{
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .text-line{
+            display:flex;
+        }
+        .line{
+            flex: 1;
+            border-bottom: 1px solid black;
+        }
+        .center img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            display : inline-block;
+        }
+
+        /* EX 5 */
+        .ex5 header{
+            background: Grey;
+            padding:5px;
+        }
+        .ex5 nav{
+            background: rgb(57, 54, 54);
+            padding: 4px;
+            align-items: center;
+        }
+        .ex5 a{
+            border-right: 2px solid white; 
+            padding:5px 10px;            
+        }
+        .row{
+            display: flex;
+        }
+
+        /* EX 6 */
+        .ex6{
+            background-color: rgba(74, 74, 244, 0.599);
+            padding: 10px 50px;
+        }
+        .ex6card{
+            background-color: white;
+            border-radius: 10px;
+        }
+        .ex6card nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 40px;
+        }
+        .vertical{
+            flex-direction: column;
+        }
+        .ex6card .row .vertical article h2{
+            margin-bottom: 0px; 
+            color:blueviolet; 
+            text-decoration:underline; 
+            text-decoration-thickness: 1px; 
+            text-underline-offset: 0px;
+
+        }
+        .row .vertical section h2{
+            background-color: rgb(174, 197, 255);
+            color:rgb(30, 80, 144);
+        }
+        table, td, th{
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 500px;
+        }
+        tbody tr:nth-child(even){
+            background-color: rgb(215, 227, 236);
+        }
+
+        /* EX 7 */
+        .ex7{
+            background-color: rgba(71, 8, 8, 0.614);
+            color:rgb(255, 255, 255);
+            font-family: cursive, sans-serif;
+        }
+        .ex7 h2, .ex7 h3{
+            font-family: Arial, Helvetica, sans-serif;
+            color:rgb(144, 192, 255)
+        }
+        .yellow{
+            color: rgba(255, 255, 0, 0.784);
+        }
+    </style>
+</head>
+<body></body>
+    <h2>Ex 1: Basic website Layout</h2>
+    <h3 style="padding-left: 40px;">My exciting website</h3>
+    <nav>
+        <a href="#" class="link">Home</a><br/>
+        <a href="#" class="link">Blog</a><br/>
+        <a href="#" class="link">About Us</a><br/>
+        <a href="#" class="link">Our History</a><br/>
+        <a href="#" class="link">Contacts</a>
+    </nav>
+    <section style="padding-left: 40px;">
+        <h2>An Exciting Blog Post</h2>
+
+        <img style="object-fit: cover" src="https://seattleballooning.com/wp-content/uploads/2022/12/IMG_4866_1-2-768x1024.jpg" width="200" height="200">
+
+        <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+            Gumbo beet greens com soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+            Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin 
+            horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram com pea. Brussels sprout coriander water chestnut 
+            gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+    </section>
+
+    <h2>Ex 2: Photo Gallery</h2>
+    <div class="center">
+        <h1>Welcome to UI Photo Gallery</h1>
+        <hr/>
+        <!--Text in mid-line-->
+        <div class="text-line">
+            <div class="line"></div>
+                <h3 style="margin: 0;">Welcome to UI Photo Gallery</h3>
+            <div class="line"></div>
+        </div>
+        <br/>
+        <!--Images-->
+        <img src="https://m.media-amazon.com/images/I/610zhS2z0JL.jpg">
+        <img src="https://c4.wallpaperflare.com/wallpaper/391/342/369/lake-night-moon-mountains-hd-free-full-moon-wallpaper-preview.jpg">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS22mI1n7j7aJNBcQtIav8M4aPGcYK9lGEDFg&s">
+
+        <p>Lorem ipsum dolor sit arnet consectetur adipisicing elt. Fugt, voluptatibus exque ipsam ilio nan moime Marditis quisquam aut voluptaten possimus perferendis tenetur, ullam harum reprehendertt et ut lasto accusantium explicabo assumenda dicta a. Tempore voluptate non, earum id comupet impedit consectetur quaerat. Praesendam canique incidunt saepe blanditiis elligendi nulla vel?</p>
+        <hr/>
+        <section>
+            <h3>Description about the page</h3>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random test. It has roots in a piece of classical Latis äterature from 45 BC, making it over 2000 years old. "Richard McClintock, a Latin professor ar Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical linerunare, discovered the undsbuble source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and by Cicen, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Laren Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+        </section>
+        <hr/>
+        <footer>
+            <p style="font-size: smaller;">© 2023 My Simple Web Page. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <h2>Ex 3 Registration Form</h2>
+
+    <div class="center">
+        <div class="text-line">
+            <div class="line"></div>
+            <h3 style="margin: 0;">Register Here</h3>
+            <div class="line"></div>
+        </div>
+        <!-- Form -->
+        <h2>Please fill and submit form</h2>
+        <form>
+            <label>Name :</label>
+            <input type="text" placeholder="Enter your name"><br/><br/>
+            <label>Email :</label>
+            <input type="text" placeholder="Enter your email"><br/><br/>
+            <label>Age :</label>
+            <input type="text" placeholder="Enter your age"><br/><br/>
+            <!-- DOB -->
+            <label>Date of Birth :</label>
+            <input type="date"><br/><br/>
+            <!-- Phone number -->
+            <label>Phone Number :</label>
+            <select>
+                <option selected disabled>Select your code</option>
+                <option>+91</option>
+                <option>+673</option>
+                <option>+359</option>
+            </select>
+            <input type="text" placeholder="Enter your phone number"><br/><br/>
+            <!-- Radio -->
+            <label>Select your gender :</label>
+            <input type="radio"><label>Male</label>
+            <input type="radio"><label>Female</label>
+            <input type="radio"><label>Other</label><br/><br/>
+            <!-- Checkbox -->
+            <label>Choose your skill level:</label>
+            <input type="checkbox"> <label>Beginner</label>
+            <input type="checkbox"> <label>Intermediate</label>
+            <input type="checkbox"> <label>Advanced</label><br/><br/>
+            <!-- Drop down -->
+            <label>Select your favorite color :</label>
+            <input type="color"><br/><br/>
+            <label>Father name :</label>
+            <input type="text" placeholder="Enter your father name"><br/><br/>
+            <!-- Checkbox -->
+            <label>Choose your language:</label>
+            <input type="checkbox"> <label>Tamil</label>
+            <input type="checkbox"> <label>English</label>
+            <input type="checkbox"> <label>Malayalam</label><br/><br/>
+            <label>Hobbies :</label>
+            <input type="text" placeholder="Enter your hobbies"><br/><br/>
+            <label>Address : </label><textarea></textarea><br/><br/>
+            <input type="Submit">
+        </form>
+    </div>
+
+    <h2>Ex 4 Contact Us Page</h2>
+    <div class="center">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, please feel free to contact us:</p>
+        <p><b>Email</b>: contact@example.com</p>
+        <p><b>Phone</b>: +123-456-7890</p>
+        <p>You can also visit our office:</p>
+        <p><i>123 Main Street <br/> Cityville, State 12345<br/> United States</i></p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS22mI1n7j7aJNBcQtIav8M4aPGcYK9lGEDFg&s"/><p style="display:inline-block">Milk and honey premium books</p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS22mI1n7j7aJNBcQtIav8M4aPGcYK9lGEDFg&s"/>
+    </div>
+
+    <h2>Ex 5: Informational Webpage (Kitten Kare)</h2>
+
+    <div class="ex5">
+        <header>
+            <h2>Kitten Kare</h2>
+        </header>
+    
+        <nav>
+            <a href="#" class="link">Home </a>
+            <a href="#" class="link"> About </a>
+            <a href="#" class="link"> Services </a>
+        </nav>
+
+        <div class="row">
+        <section style="flex: 3; padding-left: 65px;">
+            <h2 style="margin-bottom: 0;">Welcome!</h2><img src="https://nhpbs.org/wild/images/brownbearusfwsmed.jpg" height="200" width="300">
+            <p>The domestic cat[1][2] (Felis catus[2] or Felis silvestris catus[4], informally Felis domesticus[6][7]) is a small, usually furry, domesticated, carnivoresas mammal. It is often called the housecat when kept as an indoor pet, [8] or simply the cat when there is no need to distinguish it from other felids and felines. Cats are valued by humans for companionship and ability to hunt vermin and household pests. They are primarily nocturnal.[9]</p>
+        </section>
+
+        <aside style="flex: 1; ">
+            <h2>Cat Body Types</h2>
+            <ul>
+                <li>Oriental</li>
+                <li>Foreign</li>
+                <li>Semi-foreign</li>
+                <li>Semi-Cobby</li>
+                <li>Cobby</li>
+            </ul>
+        </aside>
+        </div>
+    </div>
+    <h2>Ex 6: Blog Page with Sidebar</h2>
+    <div class="ex6">
+        <div class="ex6card">
+            <nav style="background-color: rgba(255, 255, 255, 0.338);">
+                <h2>My Awesome Blog</h2>
+                <div style="padding: 28px 5px;">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                </div>
+            </nav>
+            <img src="https://5.imimg.com/data5/PG/LK/OM/GLADMIN-43864090/selection-043-500x500.png" width="100%" height="100%" style="object-fit: contain;">
+            <div class="row" style="padding: 40px 50px;">
+                <div class="vertical">
+                    <article>
+                        <h2 style="margin-bottom: 0px; color:blueviolet; text-decoration:underline; text-decoration-thickness: 1px; text-underline-offset: 0px;">Title of the first blog</h2>
+                        <h4 style="margin-top: 0;">By Aziz Ali</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue commodo neque, nec laoreet leo consequat id. Vivamus volutpat dolor quis odio fermentum aliquet non non tellus. Morbi suscipit sapien eget neque eleifend, sit amet placerat massa scelerisque. Lorem ipsum dolor</p>
+                    </article>
+                    <article>
+                        <h2 style="margin-bottom: 0;  color:blueviolet; text-decoration:underline; text-decoration-thickness: 1px; text-underline-offset: 0px;">Title of the first blog</h2>
+                        <h4 style="margin-top: 0;">By Aziz Ali</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue commodo neque, nec laoreet leo consequat id. Vivamus volutpat dolor quis odio fermentum aliquet non non tellus. Morbi suscipit sapien eget neque eleifend, sit amet placerat massa scelerisque. Lorem ipsum dolor</p>
+                    </article>
+                </div>
+                <div style="padding: 0px 20px; width:500px">
+                    <div style="background-color: rgb(237, 192, 108); padding: 1px 10px;">
+                        <h2 style="color: white; background-color: rgb(215, 81, 103); padding-left: 20px;">Useful Links</h2>
+                        <ul>
+                            <li>AzizAli.com</li>
+                            <li>iLoveCoding.org</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Ex 7: Personal Profile Page</h2>
+
+    <div class="ex7">
+        <h2><br>About Victoria Kirst</h2>
+        <p>My name is Victoria and I am <span class='yellow'>jolly, clumsy</span>, and <span class='yellow'>four-eyed</span>.</p>
+        <hr>
+        <h3>My Classes This Quarter</h3>
+        <ul>
+            <li>CSE 451 - Operating Systems</li>
+            <li>CSE 471 - Computer Design and Organization</li>
+            <li>PHYS 121 - Physics: Mechanics</li>
+            <li>CSE 498- Research w/ Prof. Luis Ceze</li>
+        </ul>
+        <h3>My Favourite Movies</h3>
+        <p><i>(I actually don't watch too many movies, so...here goes!)</i></p>
+        <ol>
+            <li>1. The last 30 minutes of Forrest Gump (<a href="#" style="color:rgb(205, 30, 30);">IMDB</a>)</li>
+            <li>2. Star Trek Episode V with Zazu (<a href="#" style="color:rgb(205, 30, 30);">IMDB</a>)</li>
+            <li>3. Fight Club (not really, but I've seen like 3 movies total so this is my 3rd fave by technicality) (<a href="#" style="color:rgb(205, 30, 30);">IMDB</a>)</li>
+        </ol>
+        <h3>My Moods</h3>
+        <div class="row" style="align-items:first baseline; margin: 0;">
+            <p>Happy:</p>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/006/828/456/small_2x/bright-smiley-face-emoji-expression-free-vector.jpg" width="200" height="200">
+            <p>Sad:</p>
+            <img src="https://banner2.cleanpng.com/20180326/teq/avj54bwme.webp" width="200" height="200">
+        </div>
+        <h3>Fun Facts About My Neighbours</h3>
+        <ul>
+            <li>Sue Smith: Effervescent is a word that describes her.</li>
+            <li>Bill Thompson: Loves playing Yu-Gi-Oh.</li>
+        </ul>
+    </div>
+
+    <h2>Ex 8 Course and Interests Page</h2>
+    <div class="row" style="align-items: center;">
+        <div class="vertical">
+            <section>
+                <h2>Courses</h2>
+
+                <p>Here are some courses I've taken:</p>
+                <table>
+                    <tr>
+                        <th>Course Number</th>
+                        <th>Course Title</th>
+                        <th>Semester Taken</th>
+                    </tr>
+                    <tbody>
+                        <tr><th colspan="3">For Credit</th></tr>
+                    <tr>
+                        <td>6.813</td>
+                        <td style="color:rgb(66, 146, 193)">User Interface design</td>
+                        <td style="color:rgb(66, 146, 193)">Spring 2014</td>
+                    </tr>
+                    <tr>
+                        <td>6.034</td>
+                        <td>Artificial Design</td>
+                        <td>Fall 2013</td>
+                    </tr>
+                    <tr>
+                        <td>6.006</td>
+                        <td>Introduction to Algorithms</td>
+                        <td>Fall 2013</td>
+                    </tr>
+
+                    <tr><th colspan="3">Listener</th></tr>
+                    <tr>
+                        <td>6.867</td>
+                        <td>Machine Learning</td>
+                        <td>Fall 2013</td>
+                    </tr>
+                    <tr>
+                        <td>6.830</td>
+                        <td>Database Systems</td>
+                        <td>Fall 2012</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h2>Interests</h2>
+                
+                <p>I am <em>interested</em> in <span style="font-family: fantasy; display: inline;">HCI</span>,
+                   <span style="font-family: cursive, sans-serif ;">memes</span> <strong>and</strong> <span style="font-family: cursive, sans-serif ;">youtube videos.</span>
+                </p>
+            </section>
+        </div>
+        <div>
+            <img src="https://5.imimg.com/data5/PG/LK/OM/GLADMIN-43864090/selection-043-500x500.png" width="100%" height="100%" style="padding: 50px 50px;">
+        </div>
+    </div>
+    
+
+</body>
+</html>
