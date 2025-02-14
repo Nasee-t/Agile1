@@ -1,0 +1,391 @@
+body{
+    min-height: 100vh;
+}
+/* Ex 1 */
+.container1{
+    display: inline-grid;
+    grid-template-columns: 100px 50px;
+    grid-template-rows: auto auto auto auto auto;
+    background-color: rgb(190, 184, 184);
+    grid-gap: 2px;
+    border: 1px double black;
+    padding: 2px;
+}
+.container1 *{
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+header, nav, footer{
+    grid-column: 1/3;
+}
+aside{
+    grid-area: 3/2/5/3;
+}
+
+/* Ex 2 */
+.container2{
+    display: inline-grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto 3fr auto;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "aside section"
+    "footer footer";
+}
+.container2 *{
+    border : 1px solid black;
+    padding: 4px 50px;
+    font-family: cursive, sans-serif;
+    font-size: medium;
+    font-weight: 100;
+    color:coral;
+}
+.container2 *:not(aside){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container2 header { grid-area : header; }
+.container2 nav { grid-area : nav;}
+.container2 aside { grid-area : aside; }
+.container2 section { grid-area : section; }
+.container2 footer { grid-area : footer; }
+
+/* Ex 3 */
+.container3{
+    display: inline-grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto 70px 70px auto;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main aside1"
+    "main section"
+    "aside2 aside2"
+    "footer footer";
+    gap: 4px;
+    width: 30%;
+}
+.container3 *{
+    padding: 4px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgb(213, 213, 213);
+    color: darkblue;
+}
+.container3 header { grid-area : header; }
+.container3 nav { grid-area : nav; }
+.container3 .aside1 { grid-area : aside1;}
+.container3 .aside2 { grid-area : aside2;}
+.container3 section { grid-area : section;}
+.container3 main { grid-area : main; }
+.container3 footer { grid-area : footer; }
+
+/* Ex 4 */
+.container4{
+    display: inline-grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 3fr auto;
+    grid-template-areas: 
+    "header header header"
+    "menu main right"
+    "menu footer footer";
+    gap: 5px;
+    background-color: rgba(9, 84, 196, 0.618);
+    padding: 5px;
+}
+.container4 *{
+    display: flex;
+    background-color: lightblue;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.container4 *:hover{
+        background-color:rgba(9, 84, 196, 0.618);
+        color: white;
+}
+.container4 .header { grid-area : header; }
+.container4 .menu { grid-area : menu; }
+.container4 .right { grid-area : right;}
+.container4 .main { grid-area : main; }
+.container4 .footer { grid-area : footer; }
+
+/* Ex 5 */
+.container5{
+    display: inline-grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 1fr 2fr 2fr;
+    background-color: rgb(198, 197, 197);
+    grid-template-areas: 
+    "header ."
+    "nav nav"
+    "section section"
+    "main aside"
+    "footer footer";
+    gap:20px;
+    padding: 20px;
+    padding-bottom: 0px;
+    width: 50vw; 
+    max-width: 1200px;
+}
+.container5 *{
+    color: white;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.container5 section, .container5 footer{
+    margin-left: 10px; margin-right: 10px;
+}
+.container5 header{ grid-area:header; background-color: rgb(49, 46, 46); width: 30%;}
+.container5 nav{ grid-area: nav; background-color: rgb(138, 134, 134); margin-top: -20px; padding:0px;}
+.container5 section{ grid-area: section; background-color: rgb(49, 46, 46);margin-top: -10px;}
+.container5 main{ grid-area: main; background-color: rgb(138, 134, 134); margin-left: 10px;}
+.container5 aside{ grid-area: aside; background-color: rgb(138, 134, 134); margin-right: 10px;}
+.container5 footer{ grid-area: footer; background-color: rgb(138, 134, 134);}
+
+@media(max-width: 768px){
+    .container5{
+        grid-template-areas: "header"
+        "nav"
+        "section"
+        "main"
+        "aside"
+        "footer";
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ex 6 */
+.container6{
+    display: inline-grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: auto 300px auto;
+    grid-template-areas: 
+    "header header"
+    "nav article"
+    "footer footer";
+    width: 60%;
+    box-shadow: 5px 5px 10px rgba(4, 6, 8, 0.618);
+}
+.container6 *{
+    padding: 30px;
+    text-align: center;
+    padding-top: 0px;
+}
+.container6 header{ grid-area:header; background-color: rgb(207, 146, 70);}
+.container6 nav{ grid-area: nav; background-color: rgb(87, 146, 200);}
+.container6 article{ grid-area: article; background-color: rgb(77, 190, 181);}
+.container6 footer{ grid-area: footer; background-color: rgb(201, 99, 99); padding-bottom: 0px;}
+
+/* Ex 7 */
+.container7{
+    display: flexbox;
+    border: 3px solid black;
+    width: 400px;
+}
+.container7 header{
+    background-color: rgb(199, 152, 244);
+    text-align: center;
+    padding: 10px;
+}
+.container7 nav{
+    background-color: rgb(157, 106, 204);
+    text-align: center;
+
+}
+.container7 main{
+    text-align: center;
+    padding: 50px;
+
+}
+.container7 footer{
+    background-color: rgb(199, 152, 244);
+    text-align: center;
+    padding: 10px;
+}
+/* Ex 8 */
+.container8{
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto 2fr auto;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "left main"
+    "footer footer";
+    text-align: center;
+    width: 400px;
+}
+.container8 aside{
+    grid-area: left;
+    background-color: rgb(208, 120, 208);
+    text-align: center;
+    padding: 50px;
+}
+.container8{
+    display: grid;
+    border: 3px solid black;
+}
+.container8 header{
+    background-color: rgb(199, 152, 244);
+    text-align: center;
+    padding: 10px;
+    grid-area:header;
+}
+.container8 nav{
+    background-color: rgb(157, 106, 204);
+    text-align: center;
+    grid-area: nav;
+}
+.container8 main{
+    grid-area:main;
+    text-align: center;
+    padding: 50px;
+
+}
+.container8 footer{
+    grid-area: footer;
+    background-color: rgb(199, 152, 244);
+    text-align: center;
+    padding: 10px;
+}
+/* Ex 9 */
+.container9{
+    display: inline-grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 
+    "header header"
+    "main aside1"
+    "main aside2"
+    "section section"
+    "aside3 aside4"
+    "footer footer";
+    text-align: center;
+    gap: 10px;
+    background-color: rgb(216, 218, 219);
+}
+.container9 *{
+    padding: 10px;
+}
+.container9 header{ grid-area: header; background-color: rgb(167, 189, 214); }
+.container9 section{ grid-area: section; background-color: rgb(167, 189, 214);}
+.container9 main{ grid-area: main; background-color: rgb(167, 189, 214);}
+.container9 .aside1{ grid-area: aside1; background-color: rgb(167, 189, 214);}
+.container9 .aside2{ grid-area: aside2; background-color: rgb(198, 205, 103);}
+.container9 .aside3{ grid-area: aside3; background-color: rgb(167, 189, 214);}
+.container9 .aside4{ grid-area: aside4; background-color: rgb(198, 205, 103);}
+.container9 footer{ grid-area: footer; background-color: rgb(167, 189, 214);}
+/* Ex 10 */
+.container10{
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+    text-align: center;
+    gap: 5px;
+}
+.container10 header{ grid-area: header; background-color: rgb(216, 218, 219); }
+.container10 nav{ grid-area: nav; background-color: rgb(216, 218, 219);}
+.container10 main{ grid-area: main;}
+.container10 footer{ grid-area: footer; background-color: rgb(216, 218, 219);}
+
+.container10 .div1{ background-color: rgb(216, 218, 219); padding: 20px;}
+.container10 .div2{ display:inline-flex; margin: 10px -10px;}
+.container10 .div2 div{ background-color: rgb(216, 218, 219); padding:150px; margin:10px;
+            animation : 1s border infinite alternate;}
+@keyframes border{
+    100%{
+        transform: rotate(360);
+        border-radius: 100px;
+    }
+}
+/* Ex 11 */
+.container11{
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+    gap: 5px;
+    padding: 10px;
+    background-color: rgb(219, 219, 208);
+    padding-top: 0px;
+    font-family: sans-serif;
+}
+.container11 header{ grid-area: header; background-color: rgb(255, 255, 255); text-align: center;}      
+.container11 nav{ grid-area: nav; background-color: rgb(27, 27, 27); padding: 10px}
+.container11 main{ grid-area: main;}
+.container11 footer{ grid-area: footer; background-color: rgb(179, 181, 181); text-align: center;}
+
+.container11 a{ text-decoration: none; color: white; margin: 0px 10px;}
+.container11 main div div{ background-color: rgb(175, 172, 172); padding: 25px}
+.container11 section, .container11 aside{
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px
+}
+
+/* Ex 12 */
+.container12{
+    display: inline-grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 3fr 1fr;
+    background-color: rgb(198, 197, 197);
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+    row-gap:5px;
+    column-gap: 5px;
+}
+.container12 *{
+    color: white;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.container12 header{ grid-area:header; background-color: rgb(49, 46, 46);}
+.container12 nav{ grid-area: nav; background-color: rgb(138, 134, 134); margin-top: -10px; padding:0px;}
+.container12 main{ grid-area: main; background-color: rgb(138, 134, 134); margin-left: 20px; color: black;}
+.container12 aside{ grid-area: aside; background-color: rgb(138, 134, 134); margin-right: 20px; color: black;}
+.container12 footer{ grid-area: footer; background-color: rgb(138, 134, 134);}
+
+/* Ex 13 */
+.container13{
+    display: inline-grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+    text-align: center;
+    gap: 5px;
+    color: white;
+}
+.container13 header{ grid-area: header; background-color: rgb(37, 37, 37); padding: 15px;}
+.container13 nav{ grid-area: nav; background-color: rgb(123, 124, 124); padding: 5px;}
+.container13 main{ grid-area: main;}
+.container13 footer{ grid-area: footer; background-color: rgb(58, 59, 59); padding: 5px;}
+
+.container13 section{ background-color: rgb(124, 124, 124); padding: 15px;}
+.container13 .div1{ background-color: rgb(59, 62, 63); padding: 20px;}
+.container13 .div2{ display:inline-flex; margin: 10px -10px;}
+.container13 .div2 div{ background-color: rgb(216, 218, 219); padding:100px; margin:10px; }
