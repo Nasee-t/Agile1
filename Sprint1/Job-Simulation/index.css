@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+::selection {
+    background: rgba(91, 201, 201, 0.773);
+}
+  
+/* Header */
+header{
+    width: 100%;
+    background: #086b7c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header a img{
+    width: 30%;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 0px 15px;
+}
+
+nav ul li a:hover{
+    background: white;
+    color: #004080;
+    border-radius: 5px;
+}
+
+/* Main */
+.container{
+    margin-top: 70px;
+    text-align: center;
+}
+
+.welcome{
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Simulation.png");
+     padding: 160px;
+     background-repeat: no-repeat;
+     background-size: cover;  
+     background-position: center;
+}
+
+.welcome p{
+    background-color: rgb(11, 39, 52);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.welcome h1{
+    font-size: 3em;
+    margin-bottom: 20px;
+    padding:10px;
+    color: rgb(255, 255, 255);;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    margin-left: 5%;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 90%;
+}
+
+.services, .about{
+    width: 48%;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+
+.services *, .about *, .services li{
+    margin-bottom: 15px;
+}
+
+.services ul{
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+
+}
+
+main .content .services{
+    flex: 2;
+}
+
+main .about{
+    flex: 1;
+}
+.services ul li{
+    margin-bottom: 10px;
+}
+
+.fa-laptop-code, .fa-chart-line, .fa-money-bill-wave{
+    color: #4aa0af;
+    font-size: 20px;
+}
+
+
+/* Footer */
+footer{
+    width: 100%;
+    background: #086b7c;
+    color: white;
+    text-align: center;
+    padding: 15px 5px;
+    margin-top: 30px;
+}
+
+footer p a{
+    color: rgb(171, 232, 246);
+}
+
+footer p a:hover{
+    color:#ffffff;
+}
+
+footer p{
+    margin-bottom: 20px;
+}
+
+.fa-envelope, .fa-phone{
+    margin: 8px;
+}
+
+.links a{
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.links a:hover{
+    color: #6dbfce;
+}
+
+@media (max-width: 768px) { 
+    header img {
+        width: 40px;
+    }
+
+    .content {
+        flex-direction: column; 
+    }
+    .services, .about {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
