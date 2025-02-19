@@ -57,7 +57,7 @@ isStudent=false;
 // 12
 let name2 = "Naseeha";
 let age2=20;
-let dob = "2004-09-20";
+let dob = "2004-10-09";
 let height=157.99;
 let weight=50;
 let degree="CSE";
