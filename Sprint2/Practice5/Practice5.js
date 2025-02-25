@@ -39,7 +39,7 @@ for( let num of num_1){
 avg = tot/num_1.length;
 console.log(`Average of elements in ${num_1} is ${avg}`);
 
-// 7 Squar
+// 7 Square
 console.log("Square : ");
 let x= 4; pattern = "";
 for(let i=1; i<=x; i++){
@@ -50,7 +50,7 @@ for(let i=1; i<=x; i++){
 }
 console.log(pattern);
 
-// 8 Square
+// 7 Triangle
 console.log("Triangle : ");
 x= 4; pattern = "";
 for(let i=1; i<=x; i++){
