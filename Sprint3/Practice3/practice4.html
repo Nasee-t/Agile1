@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boarding Pass</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="boarding-pass">
+        <!-- Left Section -->
+        <div class="left-section">
+            <div class="header light-blue">BOARDING PASS <br><span style="font-size:10px; font-weight:normal;">AIRLINE COMPANY</span></div>
+            
+            <div class="ticket-body">
+                <img src="barcode.png" alt="Barcode" class="barcode vertical-barcode">
+                
+                <div class="ticket-details-left">
+                    <div style="display: flex;">
+                        <div class="row"><strong>PASSENGER:</strong> JOHN DOE</div>
+                        <div class="row"><strong>FLIGHT:</strong> AV1A7</div>
+                        <div class="row"><strong>DATE:</strong> 27 JUN 2022</div>
+                        <div class="row"><strong>SEAT:</strong> 4B</div>
+                    </div>
+
+                    <div class="large">LONDON ✈ TOKYO</div>
+
+                    <div>
+                        <div class="row red"><strong>GATE:</strong> 25A</div>
+                        <div class="row red"><strong>BOARDING TIME:</strong> 06:30</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Separator -->
+        <div class="separator"></div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="header dark-blue">LONDON ✈ TOKYO</div>
+            <div class="ticket-body">
+                <div class="ticket-details-right">
+                    <div class="row"><strong>PASSENGER:</strong> JOHN DOE</div>
+                    
+                    <div style="display: flex; gap:100px;">
+                        <div class="row"><strong>FLIGHT:</strong> AV1A7</div>
+                        <div class="row"><strong>DATE:</strong> 27 JUN2022</div>
+                    </div>
+
+                    <div class="row"><strong>SEAT:</strong> 4B</div>
+                    <div class="row"><strong>GATE:</strong> 25A</div>
+                </div>
+            </div>
+            <img src="barcode.png" alt="Barcode" class="barcode horizontal-barcode">
+
+        </div>
+    </div>
+
+</body>
+</html>
