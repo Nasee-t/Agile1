@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Boarding Pass Container */
+.boarding-pass {
+    display: flex;
+    width: 950px;
+    height: 300px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+strong{
+    font-size: 10px;
+    color: gray;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    padding-left: 70px;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Barcodes */
+.barcode {
+    max-width: 100%;
+}
+
+/* Left Section ---------------------*/
+.left-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://media.istockphoto.com/id/951160010/vector/%C3%B0%C3%B0%C2%B5%C3%B1%C3%B0%C3%B1%C3%B1.jpg?s=612x612&w=0&k=20&c=sAzz_0z2lECTDyPna7WQi4XpxIamO5gEFZqwqoHIxDA=');
+    background-size: cover;
+}
+
+/* Light Blue Headers */
+.light-blue {
+    background: #22abe6b6;
+}
+
+/* Ticket Body */
+.ticket-body {
+    display: flex;
+    align-items: center;
+}
+
+/* barcode */
+.vertical-barcode {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    rotate: 90deg;
+    margin-right: -60px;
+    margin-left: -40px;
+    margin-top: -120px;
+}
+
+/* main content */
+
+.ticket-details-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    width: 90%;
+
+}
+
+/* Middle large font */
+.large {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.red strong{
+    color: red;
+    font-weight: 15px;
+}
+
+.ticket-details-left > div:nth-of-type(1),
+.ticket-details-left > div:nth-of-type(3) {
+    display: flex;
+    justify-content: start;
+    gap: 50px;
+}
+
+/* Right Section--------------------------------*/
+.right-section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-details-right{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+/* Header */
+.dark-blue {
+    background: #1a3d7c;
+    padding: 14px;
+}
+
+/* Ticket Details */
+.ticket-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.horizontal-barcode {
+    width: 800px;
+    height: 200px;
+    object-fit: contain;
+    margin-top: -90px;
+    margin-bottom: -90px;
+
+}
+
+/* Dotted Separator */
+.separator {
+    border-right: 11px dotted rgb(214, 212, 212);
+    margin-left: -5px;
+    margin-right: -5px;
+    position: relative;
+}
