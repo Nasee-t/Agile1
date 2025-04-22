@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task3</title>
+</head>
+<body>
+  <script>
+    //1 
+    let person1 = {
+      name: "Rose",
+      age: 20,
+      city: "Mumbai"
+    };
+    console.log("Name:", person1.name);
+    console.log("Age:", person1.age);
+    console.log("City:", person1.city);
+
+    person1.city = "Nagercoil";
+    console.log("Updated Person Object:", person1);
+
+    //2 
+    let person2 = {
+      firstName: "Rose",
+      lastName: "Nile",
+      getFullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+    };
+    
+    console.log("Full Name:", person2.getFullName());
+
+    //3
+    let jsonString = '{ "name": "Rose", "email": "rose@gmail.com", "skills": ["JavaScript", "HTML", "CSS"] }';
+
+    let userObject = JSON.parse(jsonString);
+
+    console.log("Name:", userObject.name);
+    console.log("Email:", userObject.email);
+    console.log("Skills:", userObject.skills.join(", "));
+
+    //4
+    fetch('data.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json(); 
+      })
+      .then(data => {
+        console.log("User Data:", data);
+        data.forEach(user => {
+          console.log(`Name: ${user.name}, Age: ${user.age}, City: ${user.city}`);
+        });
+      })
+      .catch(error => {
+        console.error("Error fetching the JSON file:", error);
+      });
+  </script>
+</body>
+</html>
