@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+    <style>
+        .highlight {
+          color: red;
+          font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1 -->
+    <h3>Task 1</h3>
+    <p>Choose yes or no:</p>
+    <input type="radio" name="option" value="Yes"> Yes 
+    <input type="radio" name="option" value="No"> No 
+
+    <p>Pick favourite colour :</p>
+    <input type="checkbox" class="colour" value="Black"> Black
+    <input type="checkbox" class="colour" value="White"> White
+    <input type="checkbox" class="colour" value="Blue"> Blue
+
+    <br><br>
+    <button onclick="displayOptions()">Submit</button>
+
+    <p id="output"></p>
+
+    <!-- 2 -->
+    <h3>Task 2</h3>
+
+    <h1 id="mainTitle">Welcome!</h1>
+
+    <p class="highlight">First paragraph</p>
+    <p class="highlight">Second paragraph</p>
+    <p class="highlight">Third paragraph</p>
+
+    <button onclick="applyChanges()">Apply Changes</button>
+
+    <script>
+
+        // 1
+        function displayOptions(){
+            const selectedOption= document.querySelector('input[name="option"]:checked');
+            const selectedColour= document.querySelectorAll('input.colour:checked');
+
+            const option= selectedOption ? selectedOption.value : 'None' ;
+            
+            let colours='';
+            selectedColour.forEach(colour =>{
+                colours += colour.value + ' ';
+            });
+
+            document.getElementById("output").innerHTML = 
+            `   Selected Gender: ${option} <br>
+                Selected Hobbies: ${colours.trim()}`;
+        }
+
+        // 2
+        function applyChanges(){
+            const title= document.getElementById('mainTitle');
+            title.innerHTML = "Title Changed using getElementById()!";
+
+            const firstP = document.querySelector('.highlight');
+            firstP.style.backgroundColor = 'maroon';
+
+            const allP = document.querySelectorAll('.highlight');
+            allP.forEach( para => {
+                para.style.fontSize= "21px";
+                para.style.color = "green";
+            });
+        }
+
+    </script>
+</body>
+</html>
