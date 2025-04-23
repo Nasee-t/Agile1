@@ -1,0 +1,168 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Submission</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f4f8;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 25px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #555;
+        width: 300px;
+    }
+    
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .error {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    input.error-border { border: 1px solid red; }
+    
+    .success {
+        color: green;
+        font-size: 16px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    button {
+        margin-top: 20px;
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100px;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    .data-display {
+        background-color: #e3f2fd;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    </style>
+      
+</head>
+<body>
+  <h2>Register</h2>
+  <form id="userForm">
+    <label>Name: <input type="text" id="name" placeholder="Enter name *"/></label>
+    <p class="error" id="nameError"></p>
+
+    <label>Email: <input type="email" id="email" placeholder="Enter email *"/></label>
+    <p class="error" id="emailError"></p>
+
+    <label>Age: <input type="number" id="age" placeholder="Enter age *"/></label>
+    <p class="error" id="ageError"></p>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>User Information</h2>
+  <div id="displayArea"></div>
+
+  <script>
+    document.getElementById('userForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Clear previous errors
+      document.querySelectorAll('.error').forEach(el => el.textContent = '');
+      document.querySelectorAll('input').forEach(el => el.classList.remove('error-border'));
+
+      let name = document.getElementById('name').value.trim();
+      let email = document.getElementById('email').value.trim();
+      let age = document.getElementById('age').value.trim();
+
+      let valid = true;
+
+      if (name === '' || !name.match(/^[A-Za-z\s]+$/)) {
+        document.getElementById('nameError').textContent = 'Enter a valid name';
+        document.getElementById('name').classList.add('error-border');
+        valid = false;
+      }
+
+      if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+        document.getElementById('emailError').textContent = 'Enter a valid email';
+        document.getElementById('email').classList.add('error-border');
+        valid = false;
+      }
+
+      if (isNaN(age) || age === '' || Number(age) <= 0) {
+        document.getElementById('ageError').textContent = 'Enter a valid age';
+        document.getElementById('age').classList.add('error-border');
+        valid = false;
+      }
+
+      if (valid) {
+        let userData = {
+          name,
+          email,
+          age
+        };
+
+        // Convert obj to string for local storage. store under key 'user'
+        localStorage.setItem('user', JSON.stringify(userData));
+      }
+    });
+    
+    // display
+    const data = localStorage.getItem('user');
+    const displayDiv = document.getElementById('displayArea');
+
+    if (data) {
+      const user = JSON.parse(data);
+      displayDiv.innerHTML = `
+        <p><strong>Name:</strong> ${user.name}</p>
+        <p><strong>Email:</strong> ${user.email}</p>
+        <p><strong>Age:</strong> ${user.age}</p>
+      `;
+    } else {
+      displayDiv.textContent = 'No user data found.';
+    }
+  </script>
+</body>
+</html>
